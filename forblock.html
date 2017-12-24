@@ -18,6 +18,11 @@
   <li>Gon 어카운트 주소: <span id="accountAddr"></span></li>
   <li>컨트랙트에 저장된 값: <span id="storedData"></span>
     <button onclick="getValue()">새로고침</button> (현재블록: <span id="lastBlock"></span>)</li>
+
+    <li><input id="newcontractAddr" type="text"><button onclick="setAddr()">컨트렉트 주소 변경하기</button>
+      </li>
+  
+
   <li><input id="newValue" type="text"><button onclick="setValue()">새 값으로 저장하기</button>
       <div id="result"></div></li>
   <li>새 값을 저장한 후 팬딩 트랜잭션이 블록에 포함되면 자동으로 페이지가 업데이트될 것입니다.</li>
@@ -76,6 +81,17 @@ function getValue() {
     document.getElementById('lastBlock').innerHTML = r;
   });
 }
+
+// <li><input id="newcontractAddr" type="text"><button onclick="setAddr()">컨트렉트 주소 변경하기</button>
+      //</li>
+
+function setAddr(){
+
+	contractAddress = document.getElementById('newcontractAddr').value;
+	startApp();
+
+}
+
 
 function setValue() {
 
